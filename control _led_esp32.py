@@ -1,7 +1,7 @@
 import requests
 import time
 
-ESP32_IP = '0.0.0.0'  # Replace with your ESP32's IP address
+ESP32_IP = '192.168.0.53'  # Replace with your ESP32's IP address
 
 def turn_led(state):
     try:
@@ -14,7 +14,7 @@ def turn_led(state):
         print("Response:", response.text)
     except requests.exceptions.RequestException as e:
         print("Error:", e)
-
+        
 while True:
     user_input = input("Press any key to turn the LED on or off (q to quit): ")
     if user_input.lower() == 'q':
